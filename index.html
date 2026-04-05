@@ -1,66 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Premium Website</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="MySite - Build stunning modern websites with animations and responsive design."/>
+  <title>MySite | Build Stunning Websites 🚀</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-<nav>
-  <h2>MySite</h2>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <div class="logo">MySite</div>
+    <div class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <h1 data-aos="fade-up">Build Stunning Websites 🚀</h1>
-  <p data-aos="fade-up" data-aos-delay="200">Modern UI with animations</p>
-  <button data-aos="zoom-in" data-aos-delay="400">Get Started</button>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Build Stunning Websites 🚀</h1>
+    <p>Modern UI with smooth animations & responsive design</p>
+    <a href="contact.html" class="btn">Get Started</a>
+  </section>
 
-<!-- FEATURES -->
-<section class="features">
-  <div class="card" data-aos="fade-up">⚡ Fast Performance</div>
-  <div class="card" data-aos="fade-up" data-aos-delay="200">📱 Responsive Design</div>
-  <div class="card" data-aos="fade-up" data-aos-delay="400">🎨 Modern UI</div>
-</section>
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="card">
+      <div class="icon">⚡</div>
+      <p>Fast Performance</p>
+    </div>
+    <div class="card">
+      <div class="icon">📱</div>
+      <p>Responsive Design</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎨</div>
+      <p>Modern UI</p>
+    </div>
+    <div class="card">
+      <div class="icon">🌐</div>
+      <p>Web Development</p>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <p>Data Analytics</p>
+    </div>
+    <div class="card">
+      <div class="icon">🤖</div>
+      <p>AI Solutions</p>
+    </div>
+  </section>
 
-<!-- SERVICES -->
-<section class="features">
-  <div class="card" data-aos="flip-left">🌐 Web Development</div>
-  <div class="card" data-aos="flip-left" data-aos-delay="200">📊 Data Analytics</div>
-  <div class="card" data-aos="flip-left" data-aos-delay="400">🤖 AI Solutions</div>
-</section>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>What People Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"The UI is absolutely stunning. Clean, fast, and beautiful animations throughout."</p>
+        <div class="author">— Alex M., Designer</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Best project I've come across this year. Highly polished and responsive on all devices."</p>
+        <div class="author">— Priya K., Developer</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Highly recommended! The glassmorphism cards and gradient background look incredible."</p>
+        <div class="author">— Sam T., Entrepreneur</div>
+      </div>
+    </div>
+  </section>
 
-<!-- TESTIMONIALS -->
-<section class="features">
-  <div class="card" data-aos="zoom-in">"Amazing UI!" ⭐⭐⭐⭐⭐</div>
-  <div class="card" data-aos="zoom-in" data-aos-delay="200">"Best project ever"</div>
-  <div class="card" data-aos="zoom-in" data-aos-delay="400">"Highly recommended"</div>
-</section>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 MySite | Designed by Guna 🚀</p>
+  </footer>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 MySite | Designed by You 🚀</p>
-</footer>
-
-<script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
