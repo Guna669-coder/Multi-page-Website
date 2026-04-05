@@ -1,9 +1,9 @@
 function validateForm() {
-  let name = document.forms["contactForm"]["name"].value;
-  let email = document.forms["contactForm"]["email"].value;
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
 
   if (name === "" || email === "") {
-    alert("Name and Email must be filled out!");
+    alert("Please fill all fields!");
     return false;
   }
   return true;
