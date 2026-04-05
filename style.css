@@ -12,86 +12,378 @@ body {
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
   color: white;
+  min-height: 100vh;
 }
 
+/* ✅ FIX 1: Corrected background-position values */
 @keyframes gradientBG {
-  0% { background-position: 0% }
-  50% { background-position: 100% }
-  100% { background-position: 0% }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* ========== NAV ========== */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 8%;
   backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
+  gap: 20px;
 }
 
-nav ul li {
-  margin-left: 20px;
-}
-
+/* ✅ FIX 2: Nav hover feedback */
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #00f7ff;
+}
+
+/* Hamburger (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* ========== HERO ========== */
 .hero {
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 16px;
 }
 
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.hero .btn {
+  margin-top: 10px;
+  padding: 12px 32px;
+  border-radius: 30px;
+  background: #00f7ff;
+  color: #1f1c2c;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.hero .btn:hover {
+  background: #00c8d4;
+  transform: scale(1.05);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== FEATURES ========== */
 .features {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 40px;
+  gap: 24px;
+  padding: 60px 8%;
   flex-wrap: wrap;
 }
 
+/* ✅ FIX 3: Card width set */
 .card {
-  padding: 25px;
+  padding: 28px 24px;
   border-radius: 15px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  transition: 0.4s;
+  transition: transform 0.4s, box-shadow 0.4s;
+  width: 200px;
+  text-align: center;
+  font-size: 0.95rem;
 }
 
 .card:hover {
   transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 247, 255, 0.2);
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ========== TESTIMONIALS ========== */
+.testimonials {
+  padding: 40px 8%;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  text-align: left;
+}
+
+.testimonial-card .stars {
+  color: #ffd700;
+  margin-bottom: 8px;
+}
+
+.testimonial-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.testimonial-card .author {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ========== ABOUT PAGE ========== */
+.about {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.85;
+  margin-bottom: 16px;
+}
+
+.about .team {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.team-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 24px 20px;
+  width: 180px;
+  text-align: center;
+}
+
+.team-card .avatar {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.team-card h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.team-card span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ========== CONTACT PAGE ========== */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.contact .subtitle {
+  opacity: 0.75;
+  margin-bottom: 32px;
 }
 
 .contact form {
-  width: 300px;
+  width: 340px;
   margin: auto;
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
+/* ✅ FIX 4: Input styling for dark theme */
 input, textarea {
-  margin: 10px 0;
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00f7ff;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ✅ FIX 5: Button cursor + hover */
 button {
-  padding: 10px;
+  padding: 12px;
   border-radius: 20px;
   background: #00f7ff;
+  color: #1f1c2c;
+  font-weight: 700;
   border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 
+button:hover {
+  background: #00c8d4;
+  transform: scale(1.03);
+}
+
+/* Inline form messages */
+.error-msg {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  min-height: 20px;
+}
+
+.success-msg {
+  color: #00f7ff;
+  font-size: 0.9rem;
+  min-height: 20px;
+}
+
+/* ========== FOOTER ========== */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 24px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ========== RESPONSIVE ========== */
+/* ✅ FIX 6: Mobile media queries */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(31, 28, 44, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .features {
+    padding: 40px 20px;
+    gap: 16px;
+  }
+
+  .card {
+    width: 140px;
+    padding: 20px 14px;
+  }
+
+  .contact form {
+    width: 90%;
+  }
+
+  .testimonial-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .team {
+    gap: 14px;
+  }
 }
