@@ -1,39 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="About MySite - Learn who we are and what we do."/>
+  <title>MySite | About</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-<nav>
-  <h2>MySite</h2>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <div class="logo">MySite</div>
+    <div class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<section class="about" data-aos="fade-up">
-  <h1>About Us</h1>
-  <p>We build modern, responsive, and high-performance websites.</p>
-</section>
+  <!-- ABOUT -->
+  <section class="about">
+    <h1>About Us 💡</h1>
+    <p>
+      We are a passionate team of developers and designers who believe the web should be
+      fast, beautiful, and accessible to everyone. MySite was built to showcase what modern
+      frontend development can look like when creativity meets clean code.
+    </p>
+    <p>
+      Our mission is simple — help people build stunning, responsive, and performant websites
+      without compromising on design quality. We specialize in modern UI patterns, animation,
+      and accessible web experiences.
+    </p>
 
-<section class="features">
-  <div class="card" data-aos="fade-right">👨‍💻 Skilled Developers</div>
-  <div class="card" data-aos="fade-up">🎯 Goal Oriented</div>
-  <div class="card" data-aos="fade-left">🚀 Innovation Driven</div>
-</section>
+    <!-- TEAM -->
+    <div class="team">
+      <div class="team-card">
+        <div class="avatar">👨‍💻</div>
+        <h3>Guna</h3>
+        <span>Lead Developer</span>
+      </div>
+      <div class="team-card">
+        <div class="avatar">🎨</div>
+        <h3>Priya</h3>
+        <span>UI Designer</span>
+      </div>
+      <div class="team-card">
+        <div class="avatar">📊</div>
+        <h3>Ravi</h3>
+        <span>Data Analyst</span>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 MySite</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 MySite | Designed by Guna 🚀</p>
+  </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
