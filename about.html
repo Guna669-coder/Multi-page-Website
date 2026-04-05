@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>About - My Website</title>
+  <title>About</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="logo">MySite</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <section class="about">
-    <h1>About Us</h1>
-    <p>This project demonstrates multi-page navigation, responsive design, and form validation as part of my Full Stack Internship.</p>
-  </section>
+
+<nav>
+  <h2>MySite</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="about" data-aos="fade-up">
+  <h1>About Us</h1>
+  <p>We build modern, responsive, and high-performance websites.</p>
+</section>
+
+<section class="features">
+  <div class="card" data-aos="fade-right">👨‍💻 Skilled Developers</div>
+  <div class="card" data-aos="fade-up">🎯 Goal Oriented</div>
+  <div class="card" data-aos="fade-left">🚀 Innovation Driven</div>
+</section>
+
+<footer>
+  <p>© 2026 MySite</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 </body>
 </html>
