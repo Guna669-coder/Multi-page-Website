@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Contact - My Website</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="logo">MySite</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <section class="contact">
-    <h1>Contact Us</h1>
-    <form name="contactForm" onsubmit="return validateForm()">
-      <input type="text" name="name" placeholder="Enter your name">
-      <input type="email" name="email" placeholder="Enter your email">
-      <textarea name="message" placeholder="Enter message"></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </section>
+
+<nav>
+  <h2>MySite</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="contact" data-aos="zoom-in">
+  <h1>Contact Us</h1>
+
+  <form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="email" id="email" placeholder="Enter your email">
+    <textarea id="message" placeholder="Your message"></textarea>
+    <button type="submit">Send Message 🚀</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 MySite</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 </body>
 </html>
